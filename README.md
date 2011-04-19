@@ -5,6 +5,8 @@ and a walkthrough to replicate it.
 
 ## Walkthrough
 
+### Register a Facebook application
+
 First of all, we'll need to register a new application with the Facebook platform. To do so,
 go to [facebook.com/developers](http://www.facebook.com/developers) and create your application.
 Once you have confirmed that you are in fact human, you'll be presented with a daunting number of
@@ -13,6 +15,8 @@ Populate the "canvas page" field with the URL you'd like your application to be 
 (f.ex. 'http://apps.facebook.com/myapp') and the "canvas url" field with the URL that Facebook may
 load your application from (f.ex. 'http://myserver.com/myapp'). You'll find both fields under
 "Facebook integration".
+
+### Create a new Django project
 
 Next, create a new Django project and install Fandjango:
 
@@ -24,6 +28,8 @@ it like you regularly would:
 
     $ vim settings.py
     $ ./manage.py syncdb
+    
+### Configure Fandjango
 
 Fandjango needs some configuration. Specifically, you need to add its middleware to your middleware classes and specify
 your application's id, secret key and canvas url (all of which can be found on [facebook.com/developers](http://www.facebook.com/developers))
@@ -45,7 +51,7 @@ in your settings file:
 *Note:* If you're using Django's built-in CSRF protection middleware, you need to make sure Fandjango's middleware precedes it.
 Otherwise, Facebook's requests to your application will qualify cross-site request forgeries.
 
-Now define a view and route it:
+### Develop the application
 
     # urls.py
     
@@ -61,6 +67,8 @@ Now define a view and route it:
     @facebook_authorization_required()
     def home(request):
         return HttpResponse('Hello, %s' % request.facebook.user.first_name)
+        
+### Sit back and enjoy
 
 That's it! You have created a Facebook application that authorizes and greets its users. Navigate to your application's canvas URL
 to have a closer look at your new marvel of technology.
