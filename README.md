@@ -9,12 +9,14 @@ and a walkthrough to replicate it.
 
 First of all, we'll need to register a new application with the Facebook platform. To do so,
 go to [facebook.com/developers](http://www.facebook.com/developers) and create your application.
-Once you have confirmed that you are in fact human, you'll be presented with a daunting number of
-options. Don't worry, though; they're all optional and we only need to configure two of them right now.
-Populate the "canvas page" field with the URL you'd like your application to be accessed from
-(f.ex. 'http://apps.facebook.com/myapp') and the "canvas url" field with the URL that Facebook may
-load your application from (f.ex. 'http://myserver.com/myapp'). You'll find both fields under
-"Facebook integration".
+Once you have convinced Facebook that you are in fact human, you'll be presented with a daunting
+number of options. Don't worry, though; they're all optional and we only need to configure two of
+them right now:
+
+* "Canvas Page" -- The URL you'd like your application to be accessed from, ie. "http://apps.facebook.com/myapp".
+* "Canvas URL" -- The URL that Facebook may load your application from, ie. "http://myserver.com/myapp".
+
+You'll find both of these under the "Facebook integration" section.
 
 ### Create a new Django project
 
@@ -72,3 +74,7 @@ Otherwise, Facebook's requests to your application will qualify cross-site reque
 
 That's it! You have created a Facebook application that authorizes and greets its users. Navigate to your application's canvas URL
 to have a closer look at your new marvel of technology.
+
+### Where do I go from here?
+
+You'll find all the nitty-gritty details in the README and source code in the [Fandjango repository](http://github.com/jgorset/fandjango).
