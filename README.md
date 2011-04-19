@@ -13,10 +13,10 @@ Once you have convinced Facebook that you are in fact human, you'll be presented
 number of options. Don't worry, though; they're all optional and we only need to configure two of
 them right now:
 
-* "Canvas Page" -- The URL you'd like your application to be accessed from, ie. "http://apps.facebook.com/myapp".
-* "Canvas URL" -- The URL that Facebook may load your application from, ie. "http://myserver.com/myapp".
+* *Canvas Page* - The URL you'd like your application to be accessed from, ie. "http://apps.facebook.com/myapp".
+* *Canvas URL* - The URL that Facebook may load your application from, ie. "http://myserver.com/myapp".
 
-You'll find both of these under the "Facebook integration" section.
+You'll find both of these in the *Facebook Integration* section.
 
 ### Create a new Django project
 
@@ -77,4 +77,4 @@ to have a closer look at your new marvel of technology.
 
 ### Where do I go from here?
 
-You'll find all the nitty-gritty details in the README and source code in the [Fandjango repository](http://github.com/jgorset/fandjango).
+You'll find all the nitty-gritty details in the README and source code of the [Fandjango repository](http://github.com/jgorset/fandjango).
