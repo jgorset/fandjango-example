@@ -31,7 +31,7 @@ DATABASES = {
 FACEBOOK_APPLICATION_ID = 118434614903049
 FACEBOOK_APPLICATION_SECRET_KEY = '8cce95c678d2cd3f51f11e7cce03cd21'
 FACEBOOK_APPLICATION_URL = 'http://apps.facebook.com/fandjango-example'
-FACEBOOK_APPLICATION_INITIAL_PERMISSIONS = ['offline_access', 'publish_stream']
+FACEBOOK_APPLICATION_INITIAL_PERMISSIONS = ['offline_access', 'publish_stream', 'read_stream']
 
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
