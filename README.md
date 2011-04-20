@@ -65,6 +65,7 @@ Otherwise, Facebook's requests to your application will qualify cross-site reque
     # views.py
     
     from django.http import HttpResponse
+    from fandjango.decorators import facebook_authorization_required
 
     @facebook_authorization_required()
     def home(request):
