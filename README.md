@@ -16,7 +16,7 @@ them right now:
 * *Canvas Page* - The URL you'd like your application to be accessed from, eg. "http://apps.facebook.com/myapp".
 * *Canvas URL* - The URL that Facebook may load your application from, eg. "http://myserver.com".
 
-You'll find both of these in the *Facebook Integration* section.
+You'll find both of these options in the *Facebook Integration* section.
 
 ### Create a new Django project
 
@@ -25,8 +25,8 @@ Next, create a new Django project and install Fandjango:
     $ django-admin.py startproject myfacebookapplication
     $ pip install fandjango
     
-Add fandjango to your list of installed applications, adjust your database settings and populate
-it like you regularly would:
+Add fandjango to your list of installed applications, then adjust your settings and populate your
+database like you normally would:
 
     $ vim settings.py
     $ ./manage.py syncdb
