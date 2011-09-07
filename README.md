@@ -38,7 +38,7 @@ your application's id, secret key and canvas url (all of which can be found on [
 in your settings file:
 
     FACEBOOK_APPLICATION_ID = 118434614903049
-    FACEBOOK_SECRET_KEY = '8cce95c678d2cd3f51f11e7cce03cd21'
+    FACEBOOK_APPLICATION_SECRET_KEY = '8cce95c678d2cd3f51f11e7cce03cd21'
     FACEBOOK_APPLICATION_URL = 'http://apps.facebook.com/myapp'
     
     MIDDLEWARE_CLASSES = [
