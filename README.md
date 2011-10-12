@@ -13,10 +13,8 @@ Once you have convinced Facebook that you are in fact human, you'll be presented
 number of options. Don't worry, though; they're all optional and we only need to configure two of
 them right now:
 
-* *Canvas Page* - The URL you'd like your application to be accessed from, eg. "http://apps.facebook.com/myapp".
-* *Canvas URL* - The URL that Facebook may load your application from, eg. "http://myserver.com".
-
-You'll find both of these options in the *Facebook Integration* section.
+* *App namespace* - The URL you'd like your application to be accessed from, e.g. "http://apps.facebook.com/myapp".
+* *Canvas URL* - The URL that Facebook may load your application from, e.g. "http://myserver.com".
 
 ### Create a new Django project
 
@@ -25,11 +23,7 @@ Next, create a new Django project and install Fandjango:
     $ django-admin.py startproject myfacebookapplication
     $ pip install fandjango
     
-Add fandjango to your list of installed applications, then adjust your settings and populate your
-database like you normally would:
-
-    $ vim settings.py
-    $ ./manage.py syncdb
+Add fandjango to `INSTALLED_APPS` in your settings file.
     
 ### Configure Fandjango
 
