@@ -31,9 +31,9 @@ Fandjango needs some configuration. Specifically, you need to add its middleware
 your application's id, secret key and canvas url (all of which can be found on [facebook.com/developers](http://www.facebook.com/developers))
 in your settings file:
 
-    FACEBOOK_APPLICATION_ID = 118434614903049
-    FACEBOOK_APPLICATION_SECRET_KEY = '8cce95c678d2cd3f51f11e7cce03cd21'
-    FACEBOOK_APPLICATION_URL = 'http://apps.facebook.com/myapp'
+    FACEBOOK_APPLICATION_ID = 181259711925270
+    FACEBOOK_APPLICATION_SECRET_KEY = '214e4cb484c28c35f18a70a3d735999b'
+    FACEBOOK_APPLICATION_NAMESPACE = 'myapp'
     
     MIDDLEWARE_CLASSES = [
         'django.middleware.common.CommonMiddleware',
@@ -43,9 +43,10 @@ in your settings file:
         'django.contrib.auth.middleware.AuthenticationMiddleware',
         'django.contrib.messages.middleware.MessageMiddleware',
     ]
-    
-*Note:* If you're using Django's built-in CSRF protection middleware, you need to make sure Fandjango's middleware precedes it.
-Otherwise, Facebook's requests to your application will qualify cross-site request forgeries.
+
+*Note:* If you're using Django's built-in CSRF protection middleware, you need to make sure Fandjango's
+middleware precedes it. Otherwise, Facebook's requests to your application will qualify cross-site
+request forgeries.
 
 ### Develop the application
 
@@ -61,15 +62,16 @@ Otherwise, Facebook's requests to your application will qualify cross-site reque
     from django.http import HttpResponse
     from fandjango.decorators import facebook_authorization_required
 
-    @facebook_authorization_required()
+    @facebook_authorization_required
     def home(request):
         return HttpResponse('Hello, %s' % request.facebook.user.first_name)
-        
+
 ### Sit back and enjoy
 
-That's it! You have created a Facebook application that authorizes and greets its users. Navigate to your application's canvas URL
-to have a closer look at your new marvel of technology.
+That's it! You have created a Facebook application that authorizes and greets its users. Navigate to your
+application's canvas URL to have a closer look at your new marvel of technology.
 
 ### Where do I go from here?
 
-You'll find all the nitty-gritty details in the README and source code of the [Fandjango repository](http://github.com/jgorset/fandjango).
+You should [read the documentation](readthedocs.org/docs/fandjango)
+and [browse the source code](http://github.com/jgorset/fandjango).
