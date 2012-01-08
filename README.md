@@ -46,7 +46,7 @@ in your settings file:
     
 Finally, synchronize your database to install Fandjango's models:
 
-  $ python manage.py syncdb
+    $ python manage.py syncdb
 
 *Note:* If you're using Django's built-in CSRF protection middleware, you need to make sure Fandjango's
 middleware precedes it. Otherwise, Facebook's requests to your application will qualify cross-site
