@@ -28,7 +28,7 @@ Add fandjango to `INSTALLED_APPS` in your settings file.
 ### Configure Fandjango
 
 Fandjango needs some configuration. Specifically, you need to add its middleware to your middleware classes and specify
-your application's id, secret key and canvas url (all of which can be found on [facebook.com/developers](http://www.facebook.com/developers))
+your application's id, secret key and namespace (all of which can be found on [facebook.com/developers](http://www.facebook.com/developers))
 in your settings file:
 
     FACEBOOK_APPLICATION_ID = 181259711925270
